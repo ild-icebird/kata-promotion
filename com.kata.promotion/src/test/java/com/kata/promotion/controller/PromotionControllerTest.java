@@ -32,7 +32,6 @@ public class PromotionControllerTest {
     }
 
     @Test
-    @DisplayName("Should return promotions when valid request is provided")
     public void shouldReturnPromotionsWhenValidRequestIsProvided() {
         PromotionRequest request = new PromotionRequest();
         Promotion promotion = new Promotion("X", 1);
@@ -46,7 +45,6 @@ public class PromotionControllerTest {
     }
 
     @Test
-    @DisplayName("Should return empty list when no promotions are available")
     public void shouldReturnEmptyListWhenNoPromotionsAreAvailable() {
         PromotionRequest request = new PromotionRequest();
         when(promotionService.calculatePromotions(request)).thenReturn(Collections.emptyList());
